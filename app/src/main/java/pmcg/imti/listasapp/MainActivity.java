@@ -52,8 +52,8 @@ public class MainActivity extends AppCompatActivity {
         if (data != null && data.getExtras().containsKey("nome")) {
             l.add(data.getExtras().getString("nome"));
 
-            adapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,l);
-
+//            adapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,l);
+            adapter.notifyDataSetChanged();
             lista.setAdapter(adapter);
         }
     }
